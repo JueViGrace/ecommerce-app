@@ -33,7 +33,7 @@ class LoginViewModel @Inject constructor(
         when (event) {
             is LoginEvent.EmailChanged -> {
                 _state.update { state ->
-                    return@update state.copy(
+                    state.copy(
                         email = event.email
                     )
                 }
@@ -41,7 +41,7 @@ class LoginViewModel @Inject constructor(
 
             is LoginEvent.PasswordChanged -> {
                 _state.update { state ->
-                    return@update state.copy(
+                    state.copy(
                         password = event.password
                     )
                 }
@@ -53,7 +53,7 @@ class LoginViewModel @Inject constructor(
 
             is LoginEvent.RememberChecked -> {
                 _state.update { state ->
-                    return@update state.copy(
+                    state.copy(
                         rememberChecked = event.status
                     )
                 }
@@ -69,16 +69,16 @@ class LoginViewModel @Inject constructor(
             password = state.value.password,
             email = state.value.email,
         )
-        createUser(login)
+        doLogin(login)
     }
 
-    private fun createUser(login: Login) {
+    private fun doLogin(login: Login) {
         viewModelScope.launch {
             repository.login(login).collect { resource ->
                 when (resource) {
                     is Resource.Error -> {
                         _state.update { state ->
-                            return@update state.copy(
+                            state.copy(
                                 loginError = true,
                                 loggedIn = false,
                                 loginInProgress = false,
@@ -89,7 +89,7 @@ class LoginViewModel @Inject constructor(
 
                     is Resource.Loading -> {
                         _state.update { state ->
-                            return@update state.copy(
+                            state.copy(
                                 loginInProgress = true,
                                 loginError = false,
                             )
@@ -103,8 +103,7 @@ class LoginViewModel @Inject constructor(
                             repository.upsertUser(usuario.copy(sesion = _state.value.rememberChecked))
                             repository.saveStringPreference(key = TOKEN_KEY, value = response.token)
                             _state.update { state ->
-                                log("hola")
-                                return@update state.copy(
+                                state.copy(
                                     loginError = false,
                                     loggedIn = true,
                                     loginInProgress = false,
@@ -120,15 +119,14 @@ class LoginViewModel @Inject constructor(
 
     private fun validateSession() {
         viewModelScope.launch {
-            val rememberChecked = repository.getUserSession()
+            val rememberChecked = repository.getUserSession() ?: false
+            rememberChecked.log("remember")
 
-            if (rememberChecked) {
-                _state.update { state ->
-                    return@update state.copy(
-                        loggedIn = true,
-                        loginResponse = "Bienvenido"
-                    )
-                }
+            _state.update { state ->
+                state.copy(
+                    loggedIn = rememberChecked,
+                    loginResponse = "Bienvenido"
+                )
             }
         }
     }

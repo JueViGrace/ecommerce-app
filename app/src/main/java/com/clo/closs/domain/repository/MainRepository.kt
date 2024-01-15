@@ -32,7 +32,7 @@ class MainRepository @Inject constructor(
     suspend fun upsertUser(user: User) = localDataSource.upsertUser(user)
     suspend fun deleteUser() = localDataSource.deleteUser()
     fun getUser(): Flow<List<User>> = localDataSource.getUser()
-    suspend fun getUserSession(): Boolean = localDataSource.getUserSession()
+    suspend fun getUserSession(): Boolean? = localDataSource.getUserSession()
 
     suspend fun upsertProduct(productList: List<Product>) = localDataSource.upsertProduct(productList)
     suspend fun deleteProduct() = localDataSource.deleteProduct()

@@ -9,7 +9,7 @@ interface LocalDataSource {
     suspend fun upsertUser(user: User)
     suspend fun deleteUser()
     fun getUser(): Flow<List<User>>
-    suspend fun getUserSession(): Boolean
+    suspend fun getUserSession(): Boolean?
 
     // Funciones para Artículos
     suspend fun upsertProduct(productList: List<Product>)

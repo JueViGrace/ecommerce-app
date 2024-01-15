@@ -28,7 +28,7 @@ class RoomService @Inject constructor(
         }
     }
 
-    override suspend fun getUserSession(): Boolean = userDao.getUserSession()
+    override suspend fun getUserSession(): Boolean? = userDao.getUserSession()
 
     override suspend fun upsertProduct(productList: List<Product>) =
         productDao.upsertProduct(productList.map { product: Product -> product.toDataBase() })

@@ -27,5 +27,5 @@ interface UserDao {
     fun getUser(): Flow<List<UserEntity>>
 
     @Query("SELECT sesion FROM usuario")
-    suspend fun getUserSession(): Boolean
+    suspend fun getUserSession(): Boolean?
 }
