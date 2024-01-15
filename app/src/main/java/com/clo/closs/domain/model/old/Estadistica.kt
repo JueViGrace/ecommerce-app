@@ -1,0 +1,61 @@
+package com.clo.closs.domain.model.old
+
+import com.clo.closs.data.local.entities.old.EstadisticaEntity
+
+data class Estadistica(
+    val clivisit: Double = 0.0,
+    val cntclientes: Double = 0.0,
+    val cntfacturas: Double = 0.0,
+    val cntpedidos: Double = 0.0,
+    val cntrecl: Double = 0.0,
+    val codcoord: String = "",
+    val defdolTotneto: Double = 0.0,
+    val devdolTotneto: Double = 0.0,
+    val fechaEstad: String = "",
+    val lomMontovtas: Double = 0.0,
+    val lomPrcvisit: Double = 0.0,
+    val lomPrcvtas: Double = 0.0,
+    val metavend: Double = 0.0,
+    val mtofacturas: Double = 0.0,
+    val mtopedidos: Double = 0.0,
+    val mtorecl: Double = 0.0,
+    val nombrevend: String = "",
+    val nomcoord: String = "",
+    val ppgdolTotneto: Double = 0.0,
+    val prcmeta: Double = 0.0,
+    val prcvisitas: Double = 0.0,
+    val rlomMontovtas: Double = 0.0,
+    val rlomPrcvisit: Double = 0.0,
+    val rlomPrcvtas: Double = 0.0,
+    val totdolcob: Double = 0.0,
+    val vendedor: String = ""
+) {
+    fun toDatabase() = EstadisticaEntity(
+        clivisit = clivisit,
+        cntclientes = cntclientes,
+        cntfacturas = cntfacturas,
+        cntpedidos = cntpedidos,
+        cntrecl = cntrecl,
+        codcoord = codcoord,
+        defdolTotneto = defdolTotneto,
+        devdolTotneto = devdolTotneto,
+        fechaEstad = fechaEstad,
+        lomMontovtas = lomMontovtas,
+        lomPrcvisit = lomPrcvisit,
+        lomPrcvtas = lomPrcvtas,
+        mtofacturas = mtofacturas,
+        mtopedidos = mtopedidos,
+        mtorecl = mtorecl,
+        metavend = metavend,
+        nombrevend = nombrevend,
+        nomcoord = nomcoord,
+        ppgdolTotneto = ppgdolTotneto,
+        prcmeta = prcmeta,
+        prcvisitas = prcvisitas,
+        rlomMontovtas = rlomMontovtas,
+        rlomPrcvisit = rlomPrcvisit,
+        rlomPrcvtas = rlomPrcvtas,
+        totdolcob = totdolcob,
+        vendedor = vendedor
+    )
+}

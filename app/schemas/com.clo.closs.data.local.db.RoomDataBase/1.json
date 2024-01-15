@@ -1,0 +1,282 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "47afee842e490416db7d551056c639f4",
+    "entities": [
+      {
+        "tableName": "usuario",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`supervpor` TEXT NOT NULL, `ultSinc` TEXT NOT NULL, `createdAt` TEXT NOT NULL, `codigo` TEXT NOT NULL, `sesion` INTEGER NOT NULL, `roleId` TEXT NOT NULL, `almacen` TEXT NOT NULL, `desactivo` INTEGER NOT NULL, `telefono` TEXT NOT NULL, `nombre` TEXT NOT NULL, `version` TEXT NOT NULL, `email` TEXT NOT NULL, PRIMARY KEY(`email`))",
+        "fields": [
+          {
+            "fieldPath": "supervpor",
+            "columnName": "supervpor",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ultSinc",
+            "columnName": "ultSinc",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codigo",
+            "columnName": "codigo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sesion",
+            "columnName": "sesion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "roleId",
+            "columnName": "roleId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "almacen",
+            "columnName": "almacen",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "desactivo",
+            "columnName": "desactivo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telefono",
+            "columnName": "telefono",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "version",
+            "columnName": "version",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "email"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "articulo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`codigo` TEXT NOT NULL, `enpreventa` TEXT NOT NULL, `vtaSolofac` INTEGER NOT NULL, `grupo` TEXT NOT NULL, `nombre` TEXT NOT NULL, `existencia` INTEGER NOT NULL, `marca` TEXT NOT NULL, `createdAt` TEXT NOT NULL, `productImage` TEXT NOT NULL, `comprometido` INTEGER NOT NULL, `subgrupo` TEXT NOT NULL, `vtaSolone` INTEGER NOT NULL, `vtaMax` INTEGER NOT NULL, `discont` INTEGER NOT NULL, `vtaMinenx` INTEGER NOT NULL, `vtaMin` INTEGER NOT NULL, `dctotope` REAL NOT NULL, `precio1` REAL NOT NULL, `precio2` REAL NOT NULL, `precio3` REAL NOT NULL, `precio4` REAL NOT NULL, `precio5` REAL NOT NULL, `precio6` REAL NOT NULL, `precio7` REAL NOT NULL, `unidad` TEXT NOT NULL, `deletedAt` TEXT, `fechamodifi` TEXT NOT NULL, `referencia` TEXT NOT NULL, PRIMARY KEY(`codigo`))",
+        "fields": [
+          {
+            "fieldPath": "codigo",
+            "columnName": "codigo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "enpreventa",
+            "columnName": "enpreventa",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vtaSolofac",
+            "columnName": "vtaSolofac",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "grupo",
+            "columnName": "grupo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "existencia",
+            "columnName": "existencia",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "marca",
+            "columnName": "marca",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "productImage",
+            "columnName": "productImage",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "comprometido",
+            "columnName": "comprometido",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "subgrupo",
+            "columnName": "subgrupo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vtaSolone",
+            "columnName": "vtaSolone",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vtaMax",
+            "columnName": "vtaMax",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "discont",
+            "columnName": "discont",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vtaMinenx",
+            "columnName": "vtaMinenx",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vtaMin",
+            "columnName": "vtaMin",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dctotope",
+            "columnName": "dctotope",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "precio1",
+            "columnName": "precio1",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "precio2",
+            "columnName": "precio2",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "precio3",
+            "columnName": "precio3",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "precio4",
+            "columnName": "precio4",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "precio5",
+            "columnName": "precio5",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "precio6",
+            "columnName": "precio6",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "precio7",
+            "columnName": "precio7",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unidad",
+            "columnName": "unidad",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deletedAt",
+            "columnName": "deletedAt",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "fechamodifi",
+            "columnName": "fechamodifi",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "referencia",
+            "columnName": "referencia",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "codigo"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '47afee842e490416db7d551056c639f4')"
+    ]
+  }
+}

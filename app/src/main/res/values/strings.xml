@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">CLOSS</string>
+    <string name="email">Email</string>
+    <string name="email_placeholder">ejemplo@gmail.com</string>
+    <string name="password">Password</string>
+    <string name="password_placeholder">Password…</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="accede_a_tu_cuenta">Accede a tu cuenta</string>
+    <string name="login">Login</string>
+    <string name="olvido_su_contraseña">¿Olvidó su contraseña?</string>
+    <string name="hide_password">Hide Password</string>
+    <string name="show_password">Show Password</string>
+    <string name="buscar_producto">Buscar producto</string>
+    <string name="product_search">Product Search</string>
+    <string name="your_cart">Your Cart</string>
+    <string name="guion">-</string>
+    <string name="mas">+</string>
+    <string name="recupere">Recupere su contraseña</string>
+    <string name="escriba_su_correo_electronico">Escriba su correo electrónico</string>
+    <string name="olvido">Olvidó su contraseña</string>
+    <string name="por_favor_escriba">Por favor escriba su email y le enviaremos un link para recuperarla</string>
+    <string name="continuar">Continuar</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="crea_tu_cuenta">Crea tu cuenta</string>
+    <string name="register">Register</string>
+    <string name="telefono">Teléfono</string>
+    <string name="nombres">Nombres</string>
+    <string name="register_code">Cédula o Rif</string>
+</resources>

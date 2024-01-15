@@ -1,0 +1,1602 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "5df4b9277ac548e6c6383b4b04dd2f13",
+    "entities": [
+      {
+        "tableName": "usuario",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`almacen` TEXT NOT NULL, `correlativo` TEXT NOT NULL, `correlativoreclamo` TEXT NOT NULL, `desactivo` REAL NOT NULL, `fechamodifi` TEXT NOT NULL, `kcxCodven` TEXT NOT NULL, `nombre` TEXT NOT NULL, `password` TEXT NOT NULL, `recibocobro` TEXT NOT NULL, `sesionactiva` TEXT NOT NULL, `superves` TEXT NOT NULL, `ualterprec` REAL NOT NULL, `username` TEXT NOT NULL, `ultSinc` TEXT NOT NULL, `vendedor` TEXT NOT NULL, PRIMARY KEY(`vendedor`))",
+        "fields": [
+          {
+            "fieldPath": "almacen",
+            "columnName": "almacen",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "correlativo",
+            "columnName": "correlativo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "correlativoreclamo",
+            "columnName": "correlativoreclamo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "desactivo",
+            "columnName": "desactivo",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fechamodifi",
+            "columnName": "fechamodifi",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kcxCodven",
+            "columnName": "kcxCodven",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "password",
+            "columnName": "password",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recibocobro",
+            "columnName": "recibocobro",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sesionactiva",
+            "columnName": "sesionactiva",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "superves",
+            "columnName": "superves",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ualterprec",
+            "columnName": "ualterprec",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "username",
+            "columnName": "username",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ultSinc",
+            "columnName": "ultSinc",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vendedor",
+            "columnName": "vendedor",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "vendedor"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "ke_nivgcia",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`fechamodifi` TEXT NOT NULL, `kngCodcoord` TEXT NOT NULL, `kngCodgcia` TEXT NOT NULL, PRIMARY KEY(`kngCodcoord`))",
+        "fields": [
+          {
+            "fieldPath": "fechamodifi",
+            "columnName": "fechamodifi",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kngCodcoord",
+            "columnName": "kngCodcoord",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kngCodgcia",
+            "columnName": "kngCodgcia",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "kngCodcoord"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "vendedores",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`email` TEXT NOT NULL, `nombre` TEXT NOT NULL, `sector` TEXT NOT NULL, `subsector` TEXT NOT NULL, `supervpor` TEXT NOT NULL, `telefono_movil` TEXT NOT NULL, `telefonos` TEXT NOT NULL, `ult_sinc` TEXT NOT NULL, `username` TEXT NOT NULL, `vendedor` TEXT NOT NULL, `version` TEXT NOT NULL, PRIMARY KEY(`vendedor`))",
+        "fields": [
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sector",
+            "columnName": "sector",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "subsector",
+            "columnName": "subsector",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "supervpor",
+            "columnName": "supervpor",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telefonoMovil",
+            "columnName": "telefono_movil",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telefonos",
+            "columnName": "telefonos",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ultSinc",
+            "columnName": "ult_sinc",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "username",
+            "columnName": "username",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vendedor",
+            "columnName": "vendedor",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "version",
+            "columnName": "version",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "vendedor"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "ke_estadc01",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`clivisit` REAL NOT NULL, `cntclientes` REAL NOT NULL, `cntfacturas` REAL NOT NULL, `cntpedidos` REAL NOT NULL, `cntrecl` REAL NOT NULL, `codcoord` TEXT NOT NULL, `defdolTotneto` REAL NOT NULL, `devdolTotneto` REAL NOT NULL, `fechaEstad` TEXT NOT NULL, `lomMontovtas` REAL NOT NULL, `lomPrcvisit` REAL NOT NULL, `lomPrcvtas` REAL NOT NULL, `mtofacturas` REAL NOT NULL, `mtopedidos` REAL NOT NULL, `mtorecl` REAL NOT NULL, `metavend` REAL NOT NULL, `nombrevend` TEXT NOT NULL, `nomcoord` TEXT NOT NULL, `ppgdolTotneto` REAL NOT NULL, `prcmeta` REAL NOT NULL, `prcvisitas` REAL NOT NULL, `rlomMontovtas` REAL NOT NULL, `rlomPrcvisit` REAL NOT NULL, `rlomPrcvtas` REAL NOT NULL, `totdolcob` REAL NOT NULL, `vendedor` TEXT NOT NULL, PRIMARY KEY(`vendedor`))",
+        "fields": [
+          {
+            "fieldPath": "clivisit",
+            "columnName": "clivisit",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cntclientes",
+            "columnName": "cntclientes",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cntfacturas",
+            "columnName": "cntfacturas",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cntpedidos",
+            "columnName": "cntpedidos",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cntrecl",
+            "columnName": "cntrecl",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codcoord",
+            "columnName": "codcoord",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "defdolTotneto",
+            "columnName": "defdolTotneto",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "devdolTotneto",
+            "columnName": "devdolTotneto",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fechaEstad",
+            "columnName": "fechaEstad",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lomMontovtas",
+            "columnName": "lomMontovtas",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lomPrcvisit",
+            "columnName": "lomPrcvisit",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lomPrcvtas",
+            "columnName": "lomPrcvtas",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mtofacturas",
+            "columnName": "mtofacturas",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mtopedidos",
+            "columnName": "mtopedidos",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mtorecl",
+            "columnName": "mtorecl",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "metavend",
+            "columnName": "metavend",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombrevend",
+            "columnName": "nombrevend",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nomcoord",
+            "columnName": "nomcoord",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ppgdolTotneto",
+            "columnName": "ppgdolTotneto",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "prcmeta",
+            "columnName": "prcmeta",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "prcvisitas",
+            "columnName": "prcvisitas",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rlomMontovtas",
+            "columnName": "rlomMontovtas",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rlomPrcvisit",
+            "columnName": "rlomPrcvisit",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rlomPrcvtas",
+            "columnName": "rlomPrcvtas",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totdolcob",
+            "columnName": "totdolcob",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vendedor",
+            "columnName": "vendedor",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "vendedor"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "cliempre",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`cantdocs` REAL NOT NULL, `codigo` TEXT NOT NULL, `contribespecial` REAL NOT NULL, `diasultvta` REAL NOT NULL, `direccion` TEXT NOT NULL, `email` TEXT NOT NULL, `fchcrea` TEXT NOT NULL, `fchultvta` TEXT NOT NULL, `fechamodifi` TEXT NOT NULL, `kneActiva` TEXT NOT NULL, `kneMtomin` REAL NOT NULL, `limcred` REAL NOT NULL, `mtoultvta` REAL NOT NULL, `noemifac` INTEGER NOT NULL, `noeminota` INTEGER NOT NULL, `nombre` TEXT NOT NULL, `perscont` TEXT NOT NULL, `prcdpagdia` REAL NOT NULL, `precio` REAL NOT NULL, `promdiasp` REAL NOT NULL, `promdiasvta` REAL NOT NULL, `prommtodoc` REAL NOT NULL, `riesgocrd` REAL NOT NULL, `sector` TEXT NOT NULL, `status` REAL NOT NULL, `subcodigo` TEXT NOT NULL, `telefonos` TEXT NOT NULL, `totmtodocs` REAL NOT NULL, `vendedor` TEXT NOT NULL, PRIMARY KEY(`codigo`))",
+        "fields": [
+          {
+            "fieldPath": "cantdocs",
+            "columnName": "cantdocs",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codigo",
+            "columnName": "codigo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contribespecial",
+            "columnName": "contribespecial",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "diasultvta",
+            "columnName": "diasultvta",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "direccion",
+            "columnName": "direccion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fchcrea",
+            "columnName": "fchcrea",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fchultvta",
+            "columnName": "fchultvta",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fechamodifi",
+            "columnName": "fechamodifi",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kneActiva",
+            "columnName": "kneActiva",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kneMtomin",
+            "columnName": "kneMtomin",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "limcred",
+            "columnName": "limcred",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mtoultvta",
+            "columnName": "mtoultvta",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "noemifac",
+            "columnName": "noemifac",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "noeminota",
+            "columnName": "noeminota",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "perscont",
+            "columnName": "perscont",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "prcdpagdia",
+            "columnName": "prcdpagdia",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "precio",
+            "columnName": "precio",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "promdiasp",
+            "columnName": "promdiasp",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "promdiasvta",
+            "columnName": "promdiasvta",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "prommtodoc",
+            "columnName": "prommtodoc",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "riesgocrd",
+            "columnName": "riesgocrd",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sector",
+            "columnName": "sector",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "subcodigo",
+            "columnName": "subcodigo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "telefonos",
+            "columnName": "telefonos",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totmtodocs",
+            "columnName": "totmtodocs",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vendedor",
+            "columnName": "vendedor",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "codigo"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_cliempre_codigo",
+            "unique": true,
+            "columnNames": [
+              "codigo"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_cliempre_codigo` ON `${TABLE_NAME}` (`codigo`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "ke_opti",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`fechamodifi` TEXT NOT NULL, `kePedstatus` TEXT NOT NULL, `ktiCodcli` TEXT NOT NULL, `ktiCodven` TEXT NOT NULL, `ktiCondicion` TEXT NOT NULL, `ktiDocsol` TEXT NOT NULL, `ktiFchdoc` TEXT NOT NULL, `ktiNdoc` TEXT NOT NULL, `ktiNegesp` TEXT NOT NULL, `ktiNombrecli` TEXT NOT NULL, `ktiNroped` TEXT NOT NULL, `ktiStatus` TEXT NOT NULL, `ktiTdoc` TEXT NOT NULL, `ktiTipprec` REAL NOT NULL, `ktiTotneto` REAL NOT NULL, PRIMARY KEY(`ktiNdoc`))",
+        "fields": [
+          {
+            "fieldPath": "fechamodifi",
+            "columnName": "fechamodifi",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kePedstatus",
+            "columnName": "kePedstatus",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ktiCodcli",
+            "columnName": "ktiCodcli",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ktiCodven",
+            "columnName": "ktiCodven",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ktiCondicion",
+            "columnName": "ktiCondicion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ktiDocsol",
+            "columnName": "ktiDocsol",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ktiFchdoc",
+            "columnName": "ktiFchdoc",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ktiNdoc",
+            "columnName": "ktiNdoc",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ktiNegesp",
+            "columnName": "ktiNegesp",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ktiNombrecli",
+            "columnName": "ktiNombrecli",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ktiNroped",
+            "columnName": "ktiNroped",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ktiStatus",
+            "columnName": "ktiStatus",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ktiTdoc",
+            "columnName": "ktiTdoc",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ktiTipprec",
+            "columnName": "ktiTipprec",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ktiTotneto",
+            "columnName": "ktiTotneto",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "ktiNdoc"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_ke_opti_ktiCodcli",
+            "unique": false,
+            "columnNames": [
+              "ktiCodcli"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_ke_opti_ktiCodcli` ON `${TABLE_NAME}` (`ktiCodcli`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "ke_doccti",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`aceptadev` TEXT NOT NULL, `agencia` TEXT NOT NULL, `bsflete` REAL NOT NULL, `bsiva` REAL NOT NULL, `bsmtofte` REAL NOT NULL, `bsmtoiva` REAL NOT NULL, `bsretencioniva` REAL NOT NULL, `cbsret` REAL NOT NULL, `cbsretflete` REAL NOT NULL, `cbsretiva` REAL NOT NULL, `cbsrparme` REAL NOT NULL, `cdret` REAL NOT NULL, `cdretflete` REAL NOT NULL, `cdretiva` REAL NOT NULL, `cdrparme` REAL NOT NULL, `codcliente` TEXT NOT NULL, `codcoord` TEXT NOT NULL, `contribesp` REAL NOT NULL, `dFlete` REAL NOT NULL, `diascred` REAL NOT NULL, `documento` TEXT NOT NULL, `dretencion` REAL NOT NULL, `dretencioniva` REAL NOT NULL, `dtotalfinal` REAL NOT NULL, `dtotdescuen` REAL NOT NULL, `dtotdev` REAL NOT NULL, `dtotimpuest` REAL NOT NULL, `dtotneto` REAL NOT NULL, `dtotpagos` REAL NOT NULL, `dvndmtototal` REAL NOT NULL, `emision` TEXT NOT NULL, `estatusdoc` TEXT NOT NULL, `fchvencedcto` TEXT NOT NULL, `fechamodifi` TEXT NOT NULL, `ktiNegesp` TEXT NOT NULL, `mtodcto` REAL NOT NULL, `nombrecli` TEXT NOT NULL, `recepcion` TEXT NOT NULL, `retmunMto` REAL NOT NULL, `rutaParme` TEXT NOT NULL, `tasadoc` REAL NOT NULL, `tienedcto` TEXT NOT NULL, `tipodoc` TEXT NOT NULL, `tipodocv` TEXT NOT NULL, `tipoprecio` REAL NOT NULL, `vence` TEXT NOT NULL, `vendedor` TEXT NOT NULL, PRIMARY KEY(`documento`))",
+        "fields": [
+          {
+            "fieldPath": "aceptadev",
+            "columnName": "aceptadev",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "agencia",
+            "columnName": "agencia",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bsflete",
+            "columnName": "bsflete",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bsiva",
+            "columnName": "bsiva",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bsmtofte",
+            "columnName": "bsmtofte",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bsmtoiva",
+            "columnName": "bsmtoiva",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bsretencioniva",
+            "columnName": "bsretencioniva",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cbsret",
+            "columnName": "cbsret",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cbsretflete",
+            "columnName": "cbsretflete",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cbsretiva",
+            "columnName": "cbsretiva",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cbsrparme",
+            "columnName": "cbsrparme",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cdret",
+            "columnName": "cdret",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cdretflete",
+            "columnName": "cdretflete",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cdretiva",
+            "columnName": "cdretiva",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cdrparme",
+            "columnName": "cdrparme",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codcliente",
+            "columnName": "codcliente",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codcoord",
+            "columnName": "codcoord",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contribesp",
+            "columnName": "contribesp",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dFlete",
+            "columnName": "dFlete",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "diascred",
+            "columnName": "diascred",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "documento",
+            "columnName": "documento",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dretencion",
+            "columnName": "dretencion",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dretencioniva",
+            "columnName": "dretencioniva",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dtotalfinal",
+            "columnName": "dtotalfinal",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dtotdescuen",
+            "columnName": "dtotdescuen",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dtotdev",
+            "columnName": "dtotdev",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dtotimpuest",
+            "columnName": "dtotimpuest",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dtotneto",
+            "columnName": "dtotneto",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dtotpagos",
+            "columnName": "dtotpagos",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dvndmtototal",
+            "columnName": "dvndmtototal",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "emision",
+            "columnName": "emision",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "estatusdoc",
+            "columnName": "estatusdoc",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fchvencedcto",
+            "columnName": "fchvencedcto",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fechamodifi",
+            "columnName": "fechamodifi",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ktiNegesp",
+            "columnName": "ktiNegesp",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mtodcto",
+            "columnName": "mtodcto",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombrecli",
+            "columnName": "nombrecli",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recepcion",
+            "columnName": "recepcion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "retmunMto",
+            "columnName": "retmunMto",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rutaParme",
+            "columnName": "rutaParme",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tasadoc",
+            "columnName": "tasadoc",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tienedcto",
+            "columnName": "tienedcto",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tipodoc",
+            "columnName": "tipodoc",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tipodocv",
+            "columnName": "tipodocv",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tipoprecio",
+            "columnName": "tipoprecio",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vence",
+            "columnName": "vence",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vendedor",
+            "columnName": "vendedor",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "documento"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_ke_doccti_codcliente",
+            "unique": false,
+            "columnNames": [
+              "codcliente"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_ke_doccti_codcliente` ON `${TABLE_NAME}` (`codcliente`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "ke_opmv",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`kmvArtprec` REAL NOT NULL, `kmvCant` REAL NOT NULL, `kmvCodart` TEXT NOT NULL, `kmvDctolin` REAL NOT NULL, `kmvNombre` TEXT NOT NULL, `kmvStot` REAL NOT NULL, `ktiNdoc` TEXT NOT NULL, `ktiTdoc` TEXT NOT NULL, `ktiTipprec` REAL NOT NULL, PRIMARY KEY(`ktiNdoc`, `kmvCodart`))",
+        "fields": [
+          {
+            "fieldPath": "kmvArtprec",
+            "columnName": "kmvArtprec",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kmvCant",
+            "columnName": "kmvCant",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kmvCodart",
+            "columnName": "kmvCodart",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kmvDctolin",
+            "columnName": "kmvDctolin",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kmvNombre",
+            "columnName": "kmvNombre",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kmvStot",
+            "columnName": "kmvStot",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ktiNdoc",
+            "columnName": "ktiNdoc",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ktiTdoc",
+            "columnName": "ktiTdoc",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ktiTipprec",
+            "columnName": "ktiTipprec",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "ktiNdoc",
+            "kmvCodart"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "ke_doclmv",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`agencia` TEXT NOT NULL, `cantidad` REAL NOT NULL, `cntdevuelt` REAL NOT NULL, `codcoord` TEXT NOT NULL, `codhijo` TEXT NOT NULL, `codigo` TEXT NOT NULL, `dmontoneto` REAL NOT NULL, `dmontototal` REAL NOT NULL, `documento` TEXT NOT NULL, `dpreciofin` REAL NOT NULL, `dpreciounit` REAL NOT NULL, `dvndmtototal` REAL NOT NULL, `fechadoc` TEXT NOT NULL, `fechamodifi` TEXT NOT NULL, `grupo` TEXT NOT NULL, `nombre` TEXT NOT NULL, `origen` REAL NOT NULL, `pid` TEXT NOT NULL, `subgrupo` TEXT NOT NULL, `timpueprc` REAL NOT NULL, `tipodoc` TEXT NOT NULL, `tipodocv` TEXT NOT NULL, `unidevuelt` REAL NOT NULL, `vendedor` TEXT NOT NULL, `vndcntdevuelt` REAL NOT NULL, PRIMARY KEY(`documento`, `codigo`))",
+        "fields": [
+          {
+            "fieldPath": "agencia",
+            "columnName": "agencia",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cantidad",
+            "columnName": "cantidad",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cntdevuelt",
+            "columnName": "cntdevuelt",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codcoord",
+            "columnName": "codcoord",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codhijo",
+            "columnName": "codhijo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codigo",
+            "columnName": "codigo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dmontoneto",
+            "columnName": "dmontoneto",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dmontototal",
+            "columnName": "dmontototal",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "documento",
+            "columnName": "documento",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dpreciofin",
+            "columnName": "dpreciofin",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dpreciounit",
+            "columnName": "dpreciounit",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dvndmtototal",
+            "columnName": "dvndmtototal",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fechadoc",
+            "columnName": "fechadoc",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fechamodifi",
+            "columnName": "fechamodifi",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "grupo",
+            "columnName": "grupo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "origen",
+            "columnName": "origen",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pid",
+            "columnName": "pid",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "subgrupo",
+            "columnName": "subgrupo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timpueprc",
+            "columnName": "timpueprc",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tipodoc",
+            "columnName": "tipodoc",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tipodocv",
+            "columnName": "tipodocv",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unidevuelt",
+            "columnName": "unidevuelt",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vendedor",
+            "columnName": "vendedor",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vndcntdevuelt",
+            "columnName": "vndcntdevuelt",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "documento",
+            "codigo"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "imagenes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`enlace` TEXT NOT NULL, `fechamodifi` TEXT NOT NULL, `nombre` TEXT NOT NULL, PRIMARY KEY(`enlace`))",
+        "fields": [
+          {
+            "fieldPath": "enlace",
+            "columnName": "enlace",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fechamodifi",
+            "columnName": "fechamodifi",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "enlace"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "tasas",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`fecha` TEXT NOT NULL, `fechamodifi` TEXT NOT NULL, `fechayhora` TEXT NOT NULL, `id` TEXT NOT NULL, `ip` TEXT NOT NULL, `tasa` REAL NOT NULL, `tasaib` REAL NOT NULL, `usuario` TEXT NOT NULL, PRIMARY KEY(`fecha`))",
+        "fields": [
+          {
+            "fieldPath": "fecha",
+            "columnName": "fecha",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fechamodifi",
+            "columnName": "fechamodifi",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fechayhora",
+            "columnName": "fechayhora",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ip",
+            "columnName": "ip",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tasa",
+            "columnName": "tasa",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tasaib",
+            "columnName": "tasaib",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "usuario",
+            "columnName": "usuario",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "fecha"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "articulo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`codigo` TEXT NOT NULL, `comprometido` REAL NOT NULL, `dctotope` REAL NOT NULL, `discont` REAL NOT NULL, `enpreventa` TEXT, `existencia` REAL NOT NULL, `fechamodifi` TEXT NOT NULL, `grupo` TEXT NOT NULL, `marca` TEXT, `nombre` TEXT NOT NULL, `precio1` REAL NOT NULL, `precio2` REAL NOT NULL, `precio3` REAL NOT NULL, `precio4` REAL NOT NULL, `precio5` REAL NOT NULL, `precio6` REAL NOT NULL, `precio7` REAL NOT NULL, `referencia` TEXT, `subgrupo` TEXT, `unidad` TEXT NOT NULL, `vtaMax` REAL NOT NULL, `vtaMin` REAL NOT NULL, `vtaMinenx` REAL NOT NULL, `vtaSolofac` INTEGER NOT NULL, `vtaSolone` INTEGER NOT NULL, PRIMARY KEY(`codigo`))",
+        "fields": [
+          {
+            "fieldPath": "codigo",
+            "columnName": "codigo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "comprometido",
+            "columnName": "comprometido",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dctotope",
+            "columnName": "dctotope",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "discont",
+            "columnName": "discont",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "enpreventa",
+            "columnName": "enpreventa",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "existencia",
+            "columnName": "existencia",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fechamodifi",
+            "columnName": "fechamodifi",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "grupo",
+            "columnName": "grupo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "marca",
+            "columnName": "marca",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "precio1",
+            "columnName": "precio1",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "precio2",
+            "columnName": "precio2",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "precio3",
+            "columnName": "precio3",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "precio4",
+            "columnName": "precio4",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "precio5",
+            "columnName": "precio5",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "precio6",
+            "columnName": "precio6",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "precio7",
+            "columnName": "precio7",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "referencia",
+            "columnName": "referencia",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "subgrupo",
+            "columnName": "subgrupo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "unidad",
+            "columnName": "unidad",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vtaMax",
+            "columnName": "vtaMax",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vtaMin",
+            "columnName": "vtaMin",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vtaMinenx",
+            "columnName": "vtaMinenx",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vtaSolofac",
+            "columnName": "vtaSolofac",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vtaSolone",
+            "columnName": "vtaSolone",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "codigo"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "configuracion",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`cnfgActiva` REAL NOT NULL, `cnfgClase` TEXT NOT NULL, `cnfgEtiq` TEXT NOT NULL, `cnfgIdconfig` TEXT NOT NULL, `cnfgLentxt` REAL NOT NULL, `cnfgTipo` TEXT NOT NULL, `cnfgTtip` TEXT, `cnfgValfch` TEXT NOT NULL, `cnfgValnum` REAL NOT NULL, `cnfgValsino` REAL NOT NULL, `cnfgValtxt` TEXT, `fechamodifi` TEXT NOT NULL, `username` TEXT NOT NULL, PRIMARY KEY(`cnfgEtiq`))",
+        "fields": [
+          {
+            "fieldPath": "cnfgActiva",
+            "columnName": "cnfgActiva",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cnfgClase",
+            "columnName": "cnfgClase",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cnfgEtiq",
+            "columnName": "cnfgEtiq",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cnfgIdconfig",
+            "columnName": "cnfgIdconfig",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cnfgLentxt",
+            "columnName": "cnfgLentxt",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cnfgTipo",
+            "columnName": "cnfgTipo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cnfgTtip",
+            "columnName": "cnfgTtip",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cnfgValfch",
+            "columnName": "cnfgValfch",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cnfgValnum",
+            "columnName": "cnfgValnum",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cnfgValsino",
+            "columnName": "cnfgValsino",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cnfgValtxt",
+            "columnName": "cnfgValtxt",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "fechamodifi",
+            "columnName": "fechamodifi",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "username",
+            "columnName": "username",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "cnfgEtiq"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '5df4b9277ac548e6c6383b4b04dd2f13')"
+    ]
+  }
+}
