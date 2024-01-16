@@ -66,7 +66,7 @@ fun ProductScreen(
             }
 
             is Resource.Loading -> {
-                 // ProgressBarComponent()
+                // ProgressBarComponent()
             }
 
             is Resource.Success -> {

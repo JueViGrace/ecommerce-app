@@ -19,7 +19,6 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.clo.closs.common.Constantes.navItemList
-import com.clo.closs.common.navigateSingleTopTo
 import com.clo.closs.navigation.authgraph.AuthScreens
 import com.clo.closs.navigation.detailgraph.DetailScreens
 import com.clo.closs.navigation.homegraph.HomeScreens
@@ -49,7 +48,12 @@ fun BottomBar(
                 NavigationBarItem(
                     selected = selected,
                     onClick = {
-                        navController.navigateSingleTopTo(screen.route)
+                        navController.navigate(route = screen.route) {
+                            popUpTo(HomeScreens.DashBoardScreen.route) {
+                                inclusive = screen.route == HomeScreens.DashBoardScreen.route
+                            }
+                            launchSingleTop = true
+                        }
                     },
                     icon = {
                         Icon(

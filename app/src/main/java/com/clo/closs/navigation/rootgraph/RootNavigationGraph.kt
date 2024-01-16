@@ -11,7 +11,9 @@ import com.clo.closs.navigation.homegraph.homeNavGraph
 fun RootNavigationGraph(navController: NavHostController, width: Int) {
     NavHost(navController = navController, route = Graph.ROOT, startDestination = Graph.AUTHENTICATION) {
         authNavGraph(navController = navController, width = width / 2)
-        homeNavGraph(navController)
+        homeNavGraph(
+            navController
+        )
         /*addHome(
             navController = navController,
             width = width / 2

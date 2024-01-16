@@ -8,8 +8,8 @@ class EndSession @Inject constructor(
     private val repository: MainRepository,
 ) {
     suspend operator fun invoke() {
-        repository.deleteProduct()
         repository.deleteUser()
         repository.clearPreferences(TOKEN_KEY)
+        repository.deleteProduct()
     }
 }

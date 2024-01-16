@@ -34,6 +34,7 @@ object Constantes {
     )
 
     const val WORKER_ID = "10101010-1010-1010-1010-101010101010"
+    const val WORKER_REPEAT_INTERVAL: Long = 15
 
     // Variable que contiene la version anterior de la base de datos
     const val DATABASE_VERSION_OLD: Int = 1
@@ -48,7 +49,7 @@ object Constantes {
     const val DATASTORE_NAME = "PREFERECES"
 
     // Variables que contienen los links de la empresa para la descarga o envio de datos
-    const val BASE_URL1 = "https://a1ab-45-186-203-254.ngrok-free.app/api/v1/"
+    const val BASE_URL1 = "https://aa5a-45-186-203-254.ngrok-free.app/api/v1/"
     const val BASE_URL2 = "http://cloccidental.com:5001"
 
     const val CONNECTION_TIMEOUT: Long = 30

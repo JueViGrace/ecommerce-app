@@ -1,5 +1,5 @@
 plugins {
-    id("kotlin-kapt")
+    kotlin("kapt")
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
     alias(libs.plugins.daggerHilt)
@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId = "com.clo.closs"
-        minSdk = 25
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -46,7 +46,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.0"
+        kotlinCompilerExtensionVersion = "1.5.8"
     }
     packaging {
         resources {
@@ -122,4 +122,7 @@ dependencies {
 
     // Constrain Layout
     implementation(libs.androidx.constraintlayout.compose)
+
+    // Kotlin + coroutines
+    implementation(libs.androidx.work.runtime.ktx)
 }

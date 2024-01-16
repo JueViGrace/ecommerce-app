@@ -14,7 +14,9 @@ import com.clo.closs.presentation.orders.ui.OrderScreen
 import com.clo.closs.presentation.product.ui.ProductScreen
 import com.clo.closs.presentation.profile.ui.ProfileScreen
 
-fun NavGraphBuilder.homeNavGraph(navController: NavHostController) {
+fun NavGraphBuilder.homeNavGraph(
+    navController: NavHostController
+) {
     navigation(
         route = Graph.HOME,
         startDestination = HomeScreens.DashBoardScreen.route

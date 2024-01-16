@@ -4,7 +4,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.clo.closs.common.Constantes.TOKEN_KEY
 import com.clo.closs.common.Resource
-import com.clo.closs.common.log
 import com.clo.closs.domain.model.auth.Login
 import com.clo.closs.domain.repository.MainRepository
 import com.clo.closs.domain.rules.Validator
@@ -120,8 +119,6 @@ class LoginViewModel @Inject constructor(
     private fun validateSession() {
         viewModelScope.launch {
             val rememberChecked = repository.getUserSession() ?: false
-            rememberChecked.log("remember")
-
             _state.update { state ->
                 state.copy(
                     loggedIn = rememberChecked,
@@ -147,17 +144,4 @@ class LoginViewModel @Inject constructor(
             )
         }
     }
-
-   /* private fun reset() {
-        _state.update { state ->
-            return@update state.copy(
-                loggedIn = false,
-                loginResponse = "",
-                email = "",
-                password = "",
-                rememberChecked = false,
-                loginInProgress = false
-            )
-        }
-    }*/
 }

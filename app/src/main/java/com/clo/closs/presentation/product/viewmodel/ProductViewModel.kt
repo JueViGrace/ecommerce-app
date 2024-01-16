@@ -53,19 +53,19 @@ class ProductViewModel @Inject constructor(
     }
 
     private fun getProducts() {
-            getProductsUseCase().onEach { resource ->
-                when (resource) {
-                    is Resource.Error -> _state.value = Resource.Error(
-                        message = resource.message ?: "No se encontraron productos",
-                    )
-                    is Resource.Loading -> _state.value = Resource.Loading()
-                    is Resource.Success -> {
-                        if (resource.data != null) {
-                            _state.value = Resource.Success(data = resource.data)
-                        }
+        getProductsUseCase().onEach { resource ->
+            when (resource) {
+                is Resource.Error -> _state.value = Resource.Error(
+                    message = resource.message ?: "No se encontraron productos",
+                )
+                is Resource.Loading -> _state.value = Resource.Loading()
+                is Resource.Success -> {
+                    if (resource.data != null) {
+                        _state.value = Resource.Success(data = resource.data)
                     }
                 }
-            }.launchIn(viewModelScope)
+            }
+        }.launchIn(viewModelScope)
     }
 
     private fun searchProducts(query: String) {

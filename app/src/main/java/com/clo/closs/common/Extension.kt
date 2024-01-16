@@ -8,6 +8,7 @@ import com.clo.closs.common.Constantes.CIEN_DOUBLE
 import com.clo.closs.common.Constantes.CIEN_INT
 import com.clo.closs.navigation.Graph
 import com.clo.closs.navigation.authgraph.AuthScreens
+import com.clo.closs.navigation.homegraph.HomeScreens
 import java.text.DecimalFormat
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -25,6 +26,11 @@ fun NavHostController.navigateSingleTopTo(route: String) =
         when (route) {
             Graph.ROOT -> {
                 popUpTo(Graph.ROOT) {
+                    inclusive = true
+                }
+            }
+            HomeScreens.DashBoardScreen.route -> {
+                popUpTo(Graph.HOME) {
                     inclusive = true
                 }
             }
@@ -76,7 +82,7 @@ fun String.toDateFormat(format: Int): Date =
 
 fun Double.round(): Double = (this * CIEN_DOUBLE).roundToInt() / CIEN_DOUBLE
 
-fun Double.roundToInt(): Int = (this * CIEN_INT).roundToInt() / CIEN_INT
+fun Double.roundToI(): Int = (this * CIEN_INT).roundToInt() / CIEN_INT
 
 fun Double.format(format: Int): String =
     when (format) {
