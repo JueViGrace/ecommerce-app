@@ -49,7 +49,7 @@ object Constantes {
     const val DATASTORE_NAME = "PREFERECES"
 
     // Variables que contienen los links de la empresa para la descarga o envio de datos
-    const val BASE_URL1 = "https://0e6c-45-186-203-254.ngrok-free.app/api/v1/"
+    const val BASE_URL1 = "https://71d1-45-186-203-254.ngrok-free.app/api/v1/"
     const val BASE_URL2 = "http://cloccidental.com:5001"
 
     const val CONNECTION_TIMEOUT: Long = 30
